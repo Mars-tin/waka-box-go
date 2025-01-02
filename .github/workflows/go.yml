@@ -10,9 +10,16 @@ on:
     branches: [ "master" ]
 
 jobs:
-
+   
   build:
     runs-on: ubuntu-latest
+
+    env:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      GIST_ID: b44ea7a4fe07474ae1123d1c9f51d560
+      GH_USER: Mars-tin
+      WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+    
     steps:
     - uses: actions/checkout@v2
 
